@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# local output
+dev-server.log
+dev-server.err
+tsconfig.tsbuildinfo
+.agents/
+.codex/
+
+# environment
+.env*
+!.env.example
+
+# OS/editor
+.DS_Store
+Thumbs.db
