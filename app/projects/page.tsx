@@ -16,7 +16,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Our Projects"
         title="Infrastructure projects across payments, markets and commodities."
-        copy="A focused portfolio view for the Figma project screens, separated from the landing page for cleaner navigation."
+        copy="A portfolio view of the operating tracks behind MTN Investments, from settlement rails to tokenized market infrastructure."
       />
 
       <section className={`${shell} py-16 lg:py-20`}>

@@ -169,8 +169,8 @@ export function PageHero({
       />
       <div className={`${shell} py-20 sm:py-24`}>
         <SectionLabel light>{eyebrow}</SectionLabel>
-        <h1 className="max-w-4xl font-serif text-5xl font-bold leading-none sm:text-6xl lg:text-7xl">{title}</h1>
-        <p className="mt-5 max-w-3xl text-lg leading-8 text-white/70">{copy}</p>
+        <h1 className="max-w-4xl font-serif text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
+        <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">{copy}</p>
       </div>
     </section>
   );
@@ -186,7 +186,7 @@ export function CtaBand() {
       <div className="absolute inset-0 -z-10 bg-[#003087]/90" />
       <div className="mx-auto max-w-5xl">
         <SectionLabel light>Partner With MTN Investments</SectionLabel>
-        <h2 className="font-serif text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+        <h2 className="font-serif text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
           Ready to Build on the Future Rails?
         </h2>
         <p className="mx-auto mt-5 max-w-3xl text-base leading-7 text-white/70">

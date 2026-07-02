@@ -38,11 +38,11 @@ export default function Home() {
           />
           <div className="relative max-w-5xl">
             <SectionLabel light>Global Digital Asset Infrastructure</SectionLabel>
-            <h1 className="font-serif text-5xl font-bold leading-none sm:text-7xl lg:text-[86px]">MTN Investments</h1>
-            <p className="mt-4 max-w-4xl font-serif text-3xl font-bold leading-tight text-white/95 sm:text-4xl lg:text-5xl">
+            <h1 className="font-serif text-5xl font-bold leading-none sm:text-6xl lg:text-7xl">MTN Investments</h1>
+            <p className="mt-4 max-w-4xl font-serif text-2xl font-bold leading-tight text-white/95 sm:text-3xl lg:text-4xl">
               Building the Future Rails of Digital Investments
             </p>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/70">
+            <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
               Tokenization, wallet-based settlement, exchange operations and EVM-powered infrastructure for
               institutions, governments and asset owners.
             </p>
@@ -110,7 +110,7 @@ export default function Home() {
             centered
             eyebrow="What We Enable"
             title="Clean modules for live financial markets."
-            copy="Six capabilities from the Figma design, tightened into a more scannable grid."
+            copy="A compact set of infrastructure capabilities designed for regulated digital asset programs."
           />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {capabilities.map((capability) => {
@@ -185,8 +185,8 @@ export default function Home() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             eyebrow="Our Projects"
-            title="Portfolio pages now live separately."
-            copy="The homepage keeps a preview; the full project system has its own page."
+            title="Active infrastructure initiatives."
+            copy="A preview of the platforms and operating tracks behind the MTN Investments ecosystem."
           />
           <ButtonLink href="/projects">
             View All Projects <ArrowRight size={16} aria-hidden />

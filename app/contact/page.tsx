@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { contactTracks } from "../data";
 import { Footer, Header, PageHero, SectionLabel, shell } from "../components/site";
+import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
   title: "Contact | MTN Investments",
@@ -55,67 +56,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <form className="rounded-lg border border-[#dce5f3] bg-white p-5 shadow-[0_18px_50px_rgba(0,48,135,0.11)] sm:p-7">
-            <SectionLabel>Contact Form</SectionLabel>
-            <h2 className="font-serif text-3xl font-bold text-[#071327]">Request a conversation</h2>
-            <p className="mt-3 text-sm leading-6 text-[#5d6c87]">
-              The form is ready for backend integration when hosting is connected.
-            </p>
-
-            <div className="mt-6 grid gap-4">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <label className="grid gap-2 text-sm font-bold text-[#071327]">
-                  Name
-                  <input
-                    className="rounded-lg border border-[#dce5f3] bg-[#fbfdff] px-4 py-3 font-normal outline-none transition focus:border-[#003087]"
-                    type="text"
-                    name="name"
-                    placeholder="Your name"
-                  />
-                </label>
-                <label className="grid gap-2 text-sm font-bold text-[#071327]">
-                  Work email
-                  <input
-                    className="rounded-lg border border-[#dce5f3] bg-[#fbfdff] px-4 py-3 font-normal outline-none transition focus:border-[#003087]"
-                    type="email"
-                    name="email"
-                    placeholder="you@company.com"
-                  />
-                </label>
-              </div>
-
-              <label className="grid gap-2 text-sm font-bold text-[#071327]">
-                Interest
-                <select
-                  className="rounded-lg border border-[#dce5f3] bg-[#fbfdff] px-4 py-3 font-normal outline-none transition focus:border-[#003087]"
-                  name="interest"
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    Select a track
-                  </option>
-                  <option>Tokenization</option>
-                  <option>Wallet and settlement</option>
-                  <option>Exchange infrastructure</option>
-                  <option>Sovereign EVM network</option>
-                </select>
-              </label>
-              <label className="grid gap-2 text-sm font-bold text-[#071327]">
-                Message
-                <textarea
-                  className="min-h-32 resize-y rounded-lg border border-[#dce5f3] bg-[#fbfdff] px-4 py-3 font-normal outline-none transition focus:border-[#003087]"
-                  name="message"
-                  placeholder="Tell us what you want to build"
-                />
-              </label>
-              <button
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#003087] px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5"
-                type="submit"
-              >
-                Send Inquiry <ArrowRight size={16} aria-hidden />
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </section>
 

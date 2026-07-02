@@ -1,6 +1,6 @@
 # MTN Investments
 
-Responsive Next.js frontend for MTN Investments, a global digital asset infrastructure website built from the Figma design direction.
+Responsive Next.js frontend for MTN Investments, a global digital asset infrastructure company website.
 
 ## Overview
 
@@ -40,6 +40,22 @@ Open:
 http://127.0.0.1:3000
 ```
 
+## Environment Variables
+
+Create `.env.local` for local development:
+
+```bash
+WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
+```
+
+For Vercel, add the same key in:
+
+```text
+Project Settings > Environment Variables
+```
+
+The contact form submits to `/api/contact`, and the server route forwards messages to Web3Forms. The access key is never committed to GitHub.
+
 ## Scripts
 
 ```bash
@@ -70,9 +86,13 @@ Runs TypeScript checks without emitting files.
 
 ```text
 app/
+  api/
+    contact/
+      route.ts          Secure contact form endpoint
   components/
     site.tsx          Shared header, footer, CTA, layout helpers
   contact/
+    contact-form.tsx  Client contact form
     page.tsx          Contact page
   projects/
     page.tsx          Projects page
