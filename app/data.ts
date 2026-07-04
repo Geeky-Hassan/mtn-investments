@@ -19,7 +19,7 @@ export const navItems = [
   { label: "Our Ecosystem", href: "/#ecosystem" },
   { label: "Solutions", href: "/#solutions" },
   { label: "Projects", href: "/projects" },
-  { label: "Company", href: "/#company" },
+  { label: "Portfolio Companies", href: "/#company" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -110,7 +110,7 @@ export const trustControls = [
 export const marketRails = [
   { title: "FuzionPay", detail: "Wallets / settlement / escrow" },
   { title: "FuzionOS", detail: "EVM rails / private networks" },
-  { title: "MTN Capital", detail: "Tokenization / exchange / funds" },
+  { title: "Fuzion Capital", detail: "Tokenization / exchange / funds" },
   { title: "Partners", detail: "Banks / brokers / asset owners" },
 ];
 
@@ -122,7 +122,7 @@ export const projects = [
     focus: "Wallets, custody, escrow and merchant payment infrastructure.",
   },
   {
-    title: "MTN Capital",
+    title: "Fuzion Capital",
     tag: "Markets",
     stage: "Capital layer",
     focus: "Tokenized issuance, exchange operations and structured products.",

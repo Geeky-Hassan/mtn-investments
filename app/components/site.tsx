@@ -9,21 +9,21 @@ const buttonBase =
 
 export function Logo({ compact = false, dark = false }: { compact?: boolean; dark?: boolean }) {
   return (
-    <Link href="/" className="inline-flex min-w-0 items-center gap-3" aria-label="MTN Investments home">
+    <Link href="/" className="inline-flex min-w-0 items-center gap-3 sm:gap-4" aria-label="MTN Investments home">
       <Image
-        className="h-11 w-11 shrink-0 object-contain"
+        className={compact ? "h-14 w-14 shrink-0 object-contain" : "h-16 w-16 shrink-0 object-contain sm:h-[72px] sm:w-[72px]"}
         src="/mtn-logo.png"
         alt=""
-        width={52}
-        height={52}
+        width={72}
+        height={72}
         priority
       />
       {!compact && (
         <span className="hidden min-w-0 uppercase sm:grid">
-          <span className={dark ? "text-xs font-extrabold text-white" : "text-xs font-extrabold text-[#071327]"}>
+          <span className={dark ? "text-sm font-extrabold text-white" : "text-sm font-extrabold text-[#071327] sm:text-base"}>
             MTN Investments
           </span>
-          <span className={dark ? "font-mono text-[9px] text-white/45" : "font-mono text-[9px] text-[#5d6c87]"}>
+          <span className={dark ? "font-mono text-[10px] text-white/45" : "font-mono text-[10px] text-[#5d6c87]"}>
             Global Infrastructure
           </span>
         </span>
@@ -57,7 +57,7 @@ export function ButtonLink({
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#003087]/10 bg-white/95 shadow-[0_8px_26px_rgba(0,48,135,0.07)] backdrop-blur">
-      <div className="mx-auto flex h-[70px] w-full max-w-[1440px] items-center gap-6 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[84px] w-full max-w-[1440px] items-center gap-6 px-4 sm:h-[92px] sm:px-6 lg:px-8">
         <Logo />
         <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex" aria-label="Main navigation">
           {navItems.map((item) => (
@@ -228,7 +228,7 @@ export function Footer() {
               links: [
                 { label: "FuzionOS", href: "/#ecosystem" },
                 { label: "FuzionPay", href: "/#ecosystem" },
-                { label: "MTN Capital", href: "/#ecosystem" },
+                { label: "Fuzion Capital", href: "/#ecosystem" },
               ],
             },
             {

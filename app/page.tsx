@@ -19,13 +19,19 @@ export default function Home() {
       <Header />
 
       <section className="relative isolate overflow-hidden bg-[#001d55] text-white" id="home">
-        <div
-          className="absolute inset-0 -z-20 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "linear-gradient(90deg, rgba(0,29,85,.99), rgba(0,48,135,.86)), url('/cta-rails.png')",
-          }}
-        />
+        <video
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/cta-rails.png"
+          aria-hidden="true"
+        >
+          <source src="/cta-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,29,85,.98),rgba(0,48,135,.82),rgba(0,29,85,.68))]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[length:88px_88px] opacity-70" />
         <div className={`${shell} relative py-16 sm:py-20 lg:py-24`}>
           <Image
@@ -39,8 +45,25 @@ export default function Home() {
           <div className="relative max-w-5xl">
             <SectionLabel light>Global Digital Asset Infrastructure</SectionLabel>
             <h1 className="font-serif text-5xl font-bold leading-none sm:text-6xl lg:text-7xl">MTN Investments</h1>
-            <p className="mt-4 max-w-4xl font-serif text-2xl font-bold leading-tight text-white/95 sm:text-3xl lg:text-4xl">
-              Building the Future Rails of Digital Investments
+            <p className="relative mt-4 inline-block max-w-4xl pb-5 font-serif text-2xl font-bold leading-tight text-white/95 sm:text-3xl lg:text-4xl">
+              Building the Future Rails of Global Digital Investments.
+              <span className="pointer-events-none absolute -bottom-1 left-0 h-5 w-full" aria-hidden="true">
+                <svg className="h-full w-full" viewBox="0 0 760 42" preserveAspectRatio="none" fill="none">
+                  <path
+                    d="M10 20C116 35 259 35 383 28C526 20 636 6 750 16"
+                    stroke="#c8a24a"
+                    strokeWidth="4"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M18 27C162 39 314 38 450 30C574 23 671 12 742 19"
+                    stroke="#9bdff0"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    opacity=".75"
+                  />
+                </svg>
+              </span>
             </p>
             <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">
               Tokenization, wallet-based settlement, exchange operations and EVM-powered infrastructure for
