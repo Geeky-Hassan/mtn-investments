@@ -101,8 +101,17 @@ app/
   page.tsx            Landing page
 public/
   cta-rails.png       CTA/background visual asset
+  cta-video.mp4       Hero/banner video asset
   mtn-logo.png        MTN logo asset
   mtn-logo-card.png   MTN logo card asset
+```
+
+## Updating the Hero Video
+
+Replace `public/cta-video.mp4` with the new MP4 file and keep the same filename. If a browser still shows the old static poster after replacement, hard-refresh the page or update the version query in `app/components/site.tsx`:
+
+```tsx
+const heroVideoSrc = "/cta-video.mp4?v=20260705";
 ```
 
 ## Deployment

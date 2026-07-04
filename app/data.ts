@@ -24,10 +24,10 @@ export const navItems = [
 ];
 
 export const metrics = [
-  { value: "$2.4B+", label: "Infrastructure Capacity", detail: "Tokenized asset support" },
-  { value: "3", label: "Integrated Platforms", detail: "FuzionOS / FuzionPay / Capital" },
-  { value: "18+", label: "Market Jurisdictions", detail: "Asia / Middle East / Africa" },
-  { value: "99.9%", label: "Network Uptime", detail: "FuzionOS mainnet SLA" },
+  { value: "3", label: "Integrated Platforms", detail: "FuzionOS / FuzionPay / Fuzion Capital" },
+  { value: "RWA", label: "Tokenization Focus", detail: "Real-world asset issuance" },
+  { value: "EVM", label: "Network Layer", detail: "Smart-contract infrastructure" },
+  { value: "Global", label: "Market Orientation", detail: "Cross-border operating model" },
 ];
 
 export const stackLayers: Array<{
@@ -52,7 +52,7 @@ export const stackLayers: Array<{
     eyebrow: "Tokenization, Exchange & Marketplace",
     title: "Fuzion Capital",
     icon: Landmark,
-    items: ["RWA tokenization", "Commodity issuance", "CEX exchange", "Secondary marketplace"],
+    items: ["RWA tokenization", "Commodity issuance", "Exchange operations", "Secondary marketplace"],
   },
 ];
 
@@ -164,6 +164,6 @@ export const companies = [
 export const contactTracks = [
   "Tokenize an asset",
   "Launch wallet rails",
-  "Deploy an exchange",
-  "Build a private EVM",
+  "Deploy exchange infrastructure",
+  "Build a private EVM network",
 ];

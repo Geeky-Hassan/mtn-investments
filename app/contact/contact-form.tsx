@@ -122,7 +122,7 @@ export function ContactForm() {
             <option>Tokenization</option>
             <option>Wallet and settlement</option>
             <option>Exchange infrastructure</option>
-            <option>Sovereign EVM network</option>
+            <option>Private EVM network</option>
           </select>
         </label>
 

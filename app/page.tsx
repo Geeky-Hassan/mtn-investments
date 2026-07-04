@@ -11,7 +11,7 @@ import {
   stackLayers,
   trustControls,
 } from "./data";
-import { ButtonLink, CtaBand, Footer, Header, SectionHeader, SectionLabel, shell } from "./components/site";
+import { ButtonLink, CtaBand, Footer, Header, SectionHeader, SectionLabel, VideoBackdrop, shell } from "./components/site";
 
 export default function Home() {
   return (
@@ -19,20 +19,7 @@ export default function Home() {
       <Header />
 
       <section className="relative isolate overflow-hidden bg-[#001d55] text-white" id="home">
-        <video
-          className="absolute inset-0 -z-20 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/cta-rails.png"
-          aria-hidden="true"
-        >
-          <source src="/cta-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,29,85,.98),rgba(0,48,135,.82),rgba(0,29,85,.68))]" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[length:88px_88px] opacity-70" />
+        <VideoBackdrop />
         <div className={`${shell} relative py-16 sm:py-20 lg:py-24`}>
           <Image
             className="absolute right-[-120px] top-10 h-auto w-[270px] opacity-15 sm:right-[-42px] sm:w-[360px] lg:w-[420px]"
@@ -230,8 +217,8 @@ export default function Home() {
         <div className={shell}>
           <SectionHeader
             centered
-            eyebrow="Company Profile"
-            title="An anchored portfolio of operating entities."
+            eyebrow="Portfolio Companies"
+            title="Operating companies behind the stack."
             copy="Asset management, mining, supply, tokenization and technology development under one parent."
           />
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">

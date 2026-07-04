@@ -4,14 +4,40 @@ import { ArrowRight, Mail, MapPin, Menu } from "lucide-react";
 import { navItems } from "../data";
 
 const shell = "mx-auto w-full max-w-[1190px] px-4 sm:px-6 lg:px-8";
+const heroVideoSrc = "/cta-video.mp4?v=20260705";
 const buttonBase =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5";
+  "inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 sm:w-auto";
+
+export function VideoBackdrop() {
+  return (
+    <>
+      <video
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="/cta-rails.png"
+        aria-hidden="true"
+      >
+        <source src={heroVideoSrc} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(0,29,85,.98),rgba(0,48,135,.84),rgba(0,29,85,.7))]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(255,255,255,.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[length:88px_88px] opacity-70" />
+    </>
+  );
+}
 
 export function Logo({ compact = false, dark = false }: { compact?: boolean; dark?: boolean }) {
   return (
     <Link href="/" className="inline-flex min-w-0 items-center gap-3 sm:gap-4" aria-label="MTN Investments home">
       <Image
-        className={compact ? "h-14 w-14 shrink-0 object-contain" : "h-16 w-16 shrink-0 object-contain sm:h-[72px] sm:w-[72px]"}
+        className={
+          compact
+            ? "h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
+            : "h-16 w-16 shrink-0 object-contain sm:h-[72px] sm:w-[72px]"
+        }
         src="/mtn-logo.png"
         alt=""
         width={72}
@@ -57,12 +83,12 @@ export function ButtonLink({
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[#003087]/10 bg-white/95 shadow-[0_8px_26px_rgba(0,48,135,0.07)] backdrop-blur">
-      <div className="mx-auto flex h-[84px] w-full max-w-[1440px] items-center gap-6 px-4 sm:h-[92px] sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-[84px] w-full max-w-[1440px] items-center gap-4 px-4 sm:h-[92px] sm:px-6 xl:gap-6 xl:px-8">
         <Logo />
-        <nav className="hidden flex-1 items-center justify-center gap-1 lg:flex" aria-label="Main navigation">
+        <nav className="hidden flex-1 items-center justify-center gap-1 xl:flex" aria-label="Main navigation">
           {navItems.map((item) => (
             <Link
-              className="rounded-lg px-3 py-2 text-sm text-[#5d6c87] transition hover:bg-[#eaf2ff] hover:text-[#003087]"
+              className="whitespace-nowrap rounded-lg px-2 py-2 text-sm text-[#5d6c87] transition hover:bg-[#eaf2ff] hover:text-[#003087] 2xl:px-3"
               href={item.href}
               key={item.href}
             >
@@ -70,9 +96,9 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <Link
-            className="inline-flex min-h-10 items-center rounded-lg border border-[#003087]/25 px-4 text-sm font-semibold text-[#003087]"
+            className="inline-flex min-h-10 items-center whitespace-nowrap rounded-lg border border-[#003087]/25 px-4 text-sm font-semibold text-[#003087]"
             href="/contact"
           >
             Request Demo
@@ -81,8 +107,9 @@ export function Header() {
             Partner With Us <ArrowRight size={16} aria-hidden />
           </ButtonLink>
         </div>
-        <details className="relative ml-auto lg:hidden">
+        <details className="relative ml-auto xl:hidden">
           <summary className="grid h-11 w-11 cursor-pointer place-items-center rounded-lg border border-[#dce5f3] text-[#003087]">
+            <span className="sr-only">Open menu</span>
             <Menu size={22} aria-hidden />
           </summary>
           <div className="absolute right-0 top-14 grid w-[min(290px,calc(100vw-32px))] gap-1 rounded-lg border border-[#dce5f3] bg-white p-3 shadow-[0_18px_50px_rgba(0,48,135,0.11)]">
@@ -160,14 +187,8 @@ export function PageHero({
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-[#001d55] text-white">
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center opacity-95"
-        style={{
-          backgroundImage:
-            "linear-gradient(90deg, rgba(0,29,85,.98), rgba(0,48,135,.88)), url('/cta-rails.png')",
-        }}
-      />
-      <div className={`${shell} py-20 sm:py-24`}>
+      <VideoBackdrop />
+      <div className={`${shell} py-16 sm:py-20 lg:py-24`}>
         <SectionLabel light>{eyebrow}</SectionLabel>
         <h1 className="max-w-4xl font-serif text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
         <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:text-lg">{copy}</p>
@@ -232,11 +253,11 @@ export function Footer() {
               ],
             },
             {
-              title: "Company",
+              title: "Portfolio",
               links: [
                 { label: "Our Ecosystem", href: "/#ecosystem" },
                 { label: "Solutions", href: "/#solutions" },
-                { label: "Projects", href: "/projects" },
+                { label: "Portfolio Companies", href: "/#company" },
               ],
             },
             {
